@@ -1,0 +1,18 @@
+{
+  "course": "CSE412 \u2014 Big Data & Large-Scale Computing",
+  "project": "Hospital Readmission Risk Prediction & Healthcare Analytics",
+  "dataset_size": 10000,
+  "unique_patients": 8991,
+  "train_rows": 7999,
+  "test_rows": 2001,
+  "hadoop_version": "3.4.1",
+  "pig_version": "0.17.0",
+  "hive_version": "4.2.0",
+  "spark_version": "3.5.9",
+  "models_evaluated": [
+    "Logistic Regression",
+    "Random Forest"
+  ],
+  "metrics_file": "/home/manic/project/results/model_metrics.csv",
+  "predictions_file": "/home/manic/project/results/sample_predictions.csv"
+}

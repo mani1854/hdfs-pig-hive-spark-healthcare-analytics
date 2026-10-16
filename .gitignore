@@ -1,0 +1,27 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.cache/
+
+# Big Data Logs & Temporary files
+logs/
+*.log
+derby.log
+metastore_db/
+*.lck
+*.tmp
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+.idea/
+.vscode/
