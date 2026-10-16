@@ -256,14 +256,4 @@ Evaluated on patient-level test split (2,001 encounters, 662 positive `<30` read
 
 ---
 
-## 8. 10-Minute Course Presentation / Demo Script
 
-| Minute | Stage | Action / Talking Point |
-| :--- | :--- | :--- |
-| **00:00 – 01:30** | **Project & Architecture Overview** | Introduce CSE412 problem: 30-day hospital readmissions under Affordable Care Act HRRP. Show the architecture diagram: Raw CSV → HDFS → Pig → Hive → Spark MLlib. |
-| **01:30 – 03:00** | **Stage 1 & 2: Ingestion into HDFS** | Demonstrate the 10,000-row stratified sample in `data/diabetes_sample.csv`. Show HDFS directory verification with `hdfs dfs -ls /cse412_hospital_readmission/raw/`. |
-| **03:00 – 04:30** | **Stage 3: Apache Pig ETL** | Show `clean_hospital_data.pig`. Explain data cleaning: header filtering, type casting, missing value handling (`?` → `Unknown`), and storing cleaned TSV into HDFS. Verify output records. |
-| **04:30 – 06:00** | **Stage 4: Apache Hive Warehousing** | Open Beeline. Show the external table over Pig output. Highlight key healthcare insight: prior inpatient admissions increase 30-day readmission from 7.6% (0 prior) to 22.1% (2+ prior). Show exported table in HDFS. |
-| **06:00 – 08:00** | **Stage 5: Apache Spark MLlib** | Show patient-level hash partition to prevent patient data leakage across train and test sets. Explain feature engineering pipeline (StringIndexer + OneHotEncoder + VectorAssembler). Show training of Logistic Regression and Random Forest. |
-| **08:00 – 09:30** | **Stage 6: Results & Evaluation** | Display model metrics table and bar chart (`results/model_comparison.png`). Provide honest academic interpretation of class imbalance (ROC-AUC ~0.628 vs accuracy at 0.5 threshold). |
-| **09:30 – 10:00** | **Q&A & Conclusion** | Summarize genuine multi-engine distributed integration across all course technologies. |
